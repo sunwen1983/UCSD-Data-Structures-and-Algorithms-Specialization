@@ -1,5 +1,4 @@
 import sys
-import unittest
 
 def gcd_naive(a, b):
     current_gcd = 1
@@ -20,15 +19,6 @@ def gcd_fast(a, b):
         divisor = remainder
 
     return dividend
-
-class MyTest(unittest.TestCase):
-    def test_naive(self):
-        self.assertEqual(gcd_naive(18, 35), 1)
-        self.assertEqual(gcd_naive(28851538, 1183019), 17657)
-
-    def test_fast(self):
-        self.assertEqual(gcd_fast(18, 35), 1)
-        self.assertEqual(gcd_fast(28851538, 1183019), 17657)
 
 if __name__ == "__main__":
     input = sys.stdin.read()
